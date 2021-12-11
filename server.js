@@ -3,12 +3,12 @@
 
 
  let app=express()
- app.use(express.json())
+ app.use(express.json())// enable parsing Json sent with request
 
  app.use('/api',states_api)
 
  app.use(function (req,res,next){
-     res.status(404).send('Not found')
+     res.status(404).send('Not found')// if the data is
  })
 
  app.use(function (err,req,res,next){

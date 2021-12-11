@@ -13,7 +13,7 @@ module.exports = {
       },
       visited: {
         type: Sequelize.BOOLEAN,
-        defaultValue:false
+        defaultValue:false // set the default value false
       },
       lat: {
         type: Sequelize.FLOAT
@@ -27,13 +27,13 @@ module.exports = {
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        defaultValue: new Date()
+        defaultValue: new Date()  // set a new date for the data created
 
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        defaultValue: new Date()
+        defaultValue: new Date()// set a new date for the data updated9
       }
     });
   },

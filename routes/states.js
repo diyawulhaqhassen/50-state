@@ -11,7 +11,7 @@ router.get('/states',function (req,res,next){
 })
 // patch route to update a state
 // request to states // iowa
-
+// fetch a single state detail information
 router.patch('/states/:name',function (req,res,next){
     let stateName =req.params.name //Iowa
     let stateVisited=req.body.visited//true
