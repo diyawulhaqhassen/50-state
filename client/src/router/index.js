@@ -4,6 +4,7 @@
 
  import StateList from "@/components/StateList";
  import AboutSite from "@/components/AboutSite";
+ import StateMap from "@/components/StateMap";
 
 export default  createRouter({
     history: createWebHashHistory(),
@@ -19,6 +20,10 @@ export default  createRouter({
             path:'/about',
             name:'AboutSite',
             component:AboutSite
+        },{
+            path:'/map/:state', // the path go to state and using url shows the state map
+            name:'StateMap',
+            component:StateMap
         }
     ]
 })
