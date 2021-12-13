@@ -19,7 +19,7 @@ export default {
         }
       })
       return visitedCount
-    },29999bu9
+    },
 }
 }
 </script>
