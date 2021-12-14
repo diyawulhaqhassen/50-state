@@ -1,7 +1,9 @@
 <template>
 
-  <p> There are {{states.length}} states visited</p>
-  <p>{{totalVisited}}</p>
+  <p> There are a total of  {{states.length}} states and the District of Columbia </p>
+  <p>You have visited {{totalVisited}} {{units}}</p>
+
+  <p v-if="areAllVisited" id ="all-Visited-message" > You have visited all the states and the District of Columbia! </p>
 </template>
 
 <script>
@@ -19,11 +21,27 @@ export default {
         }
       })
       return visitedCount
+    },units(){
+
+      if (this.totalVisited===1){
+        return 'state'
+      }else{
+        return 'states'
+
+      }
     },
-}
+    areAllVisited(){
+      return this.totalVisited===this.states.length
+    }
+  }
+
 }
 </script>
 
 <style scoped>
-
+#all-Visited-message{
+  color: purple;
+  font-weight: 600;
+  font-size: medium;
+}
 </style>
