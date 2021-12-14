@@ -1,8 +1,12 @@
  let express=require('express')
  let states_api =require('./routes/states')
+ let  path=require('path')
 
 
  let app=express()
+
+ let  vueAppPath =path.join(__dirname,'client','dist')
+ app.use(express.static(vueAppPath))// request to the app
  app.use(express.json())// enable parsing Json sent with request
 
  app.use('/api',states_api)
