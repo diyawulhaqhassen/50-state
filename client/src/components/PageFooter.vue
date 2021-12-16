@@ -8,6 +8,11 @@
     <span class="nav-link">
         <router-link to="/about">About this site</router-link>
     </span>
+
+    <span class="nav-link">
+        <router-link to="/i_have_been_here">States Visited</router-link>
+    </span>
+
   </div>
 
   <p> Header image by

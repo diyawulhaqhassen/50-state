@@ -1,4 +1,5 @@
 let express =require('express')
+
 let States=require('../models').States
 
 let router =express.Router()
@@ -9,6 +10,14 @@ router.get('/states',function (req,res,next){
     })
         .catch(err=>next(err))
 })
+router.get('/states_Visited',function (req,res,next){
+    States.findAll({order:['name'],where:{visited:true}}).then(satesVisited=>{
+        return res.json(satesVisited)
+    })
+        .catch(err=>next(err))
+
+})
+
 
 
 //state/california get single state

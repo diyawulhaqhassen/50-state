@@ -49,13 +49,15 @@ export default {
       this.$stateService.getOneState(this.state.name).then(state=>{
         this.state=state
         this.dataReady=true
+        this.setMapView()
 
 
       }).catch(err =>{
 
         // if 404 not found error
         if(err.response && err.response.status ===404){
-          this.state.name='?'
+          //this.state.name='?'
+          this.$router.push({name:'NotFound'})
         }
         // otherwise the error is 500 server error send general message
         else {
